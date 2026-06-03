@@ -34,9 +34,9 @@ const RoadmapSection = () => {
                 <h2 className={styles.heading}>🗺️ 21 Days Transformation Roadmap</h2>
 
                 <div className={styles.grid}>
-                    {/* Weeks */}
-                    <div className={styles.weeks}>
-                        {weeks.map((w) => (
+                    {/* Left - Weeks 1 & 2 */}
+                    <div className={styles.weeksLeft}>
+                        {weeks.slice(0, 2).map((w) => (
                             <div key={w.label}
                                 className={styles.weekCard}
                                 style={{ background: w.color, borderTop: `4px solid ${w.accent}` }}
@@ -55,20 +55,45 @@ const RoadmapSection = () => {
                         ))}
                     </div>
 
-                    {/* Center */}
+                    {/* Center - 21 Days badge + transformation image */}
                     <div className={styles.center}>
                         <div className={styles.bigBox}>
                             <span className={styles.bigNum}>21</span>
                             <p className={styles.bigSub}>DAYS<br />TO A<br />NEW YOU</p>
                         </div>
+                        <img
+                            src="/transformation_couple.png"
+                            alt="21 Days Transformation"
+                            className={styles.transformImg}
+                        />
                     </div>
 
-                    {/* Perks */}
-                    <div className={styles.perks}>
-                        <h3 className={styles.perksTitle}>What You'll Get</h3>
-                        <ul className={styles.perksList}>
-                            {perks.map((p) => <li key={p}><span className={styles.perkCheck}>✅</span> {p}</li>)}
-                        </ul>
+                    {/* Right - Week 3 + Perks */}
+                    <div className={styles.rightCol}>
+                        {/* Week 3 */}
+                        <div
+                            className={styles.weekCard}
+                            style={{ background: weeks[2].color, borderTop: `4px solid ${weeks[2].accent}` }}
+                        >
+                            <div className={styles.wkLabel} style={{ color: weeks[2].accent }}>{weeks[2].label}</div>
+                            <div className={styles.wkTitle}>{weeks[2].title}</div>
+                            <div className={styles.wkDays}>{weeks[2].days}</div>
+                            <ul className={styles.wkItems}>
+                                {weeks[2].items.map((it) => <li key={it}>• {it}</li>)}
+                            </ul>
+                            <div className={styles.wkResult} style={{ borderColor: weeks[2].accent }}>
+                                <span>Expected Result</span>
+                                <strong>{weeks[2].result}</strong>
+                            </div>
+                        </div>
+
+                        {/* Perks */}
+                        <div className={styles.perks}>
+                            <h3 className={styles.perksTitle}>What You'll Get</h3>
+                            <ul className={styles.perksList}>
+                                {perks.map((p) => <li key={p}><span className={styles.perkCheck}>✅</span> {p}</li>)}
+                            </ul>
+                        </div>
                     </div>
                 </div>
 

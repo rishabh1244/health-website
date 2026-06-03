@@ -1,22 +1,15 @@
 .section {
-    padding: 60px 16px;
+    padding: 50px 16px;
     background: #f6fbf7;
 }
 
 .title {
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     color: #555;
-    letter-spacing: 2px;
-    margin: 0 0 8px;
-}
-
-.subtitle {
-    text-align: center;
-    font-size: 13.5px;
-    color: #777;
-    margin: 0 0 32px;
+    letter-spacing: 2.5px;
+    margin: 0 0 36px;
 }
 
 .grid {
@@ -24,147 +17,126 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 18px;
 }
 
 /* Card */
 .card {
     background: #fff;
     border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 22px 14px 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e8f0ea;
     transition: transform 0.22s, box-shadow 0.22s;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
-/* Image */
-.imgBox {
-    position: relative;
-    height: 210px;
-    overflow: hidden;
-    background: #e8f5e9;
+/* Before/After Photos Row */
+.photoRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.imgBox img {
-    width: 100%;
-    height: 100%;
+.photoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
     object-fit: cover;
     object-position: center top;
-    transition: transform 0.4s;
+    border: 3px solid #e0ede4;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-.card:hover .imgBox img {
-    transform: scale(1.04);
+.photoLabel {
+    font-size: 9px;
+    font-weight: 700;
+    color: #888;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
 }
 
-.weightLostTag {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.tagBadge {
     background: #2d6a4f;
     color: #fff;
     font-size: 12px;
     font-weight: 800;
-    padding: 4px 10px;
+    padding: 5px 10px;
     border-radius: 20px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 6px;
 }
 
-.beforeAfterLabels {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+/* Arrows */
+.arrows {
     display: flex;
-    justify-content: space-between;
-    padding: 8px 12px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, transparent 100%);
+    gap: 12px;
+    margin-bottom: 8px;
 }
 
-.beforeAfterLabels span {
+.arrows span {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1.5px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 10px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: 1.5px;
-    opacity: 0.9;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.arrows span:hover {
+    color: #2d6a4f;
+    border-color: #2d6a4f;
 }
 
 /* Info */
 .info {
-    padding: 16px;
-    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-.quote {
-    font-size: 12.5px;
-    color: #444;
-    font-style: italic;
-    line-height: 1.6;
-    flex: 1;
-    margin: 0;
-}
-
-.divider {
-    height: 1px;
-    background: #eef4ef;
-}
-
-.nameRow {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #2d6a4f, #40916c);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    font-weight: 800;
-    flex-shrink: 0;
+    gap: 2px;
 }
 
 .name {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 800;
     color: #111;
+    margin: 4px 0 2px;
+}
+
+.result {
+    font-size: 12px;
+    color: #2d6a4f;
+    font-weight: 600;
     margin: 0;
 }
 
-.locationText {
-    font-size: 10.5px;
-    color: #999;
-    margin: 1px 0 0;
-}
-
-.resultBadge {
-    margin-left: auto;
-    background: #f0faf5;
-    border: 1px solid #c8e6d4;
-    border-radius: 6px;
-    padding: 4px 8px;
-}
-
-.resultBadge span {
-    font-size: 10px;
-    color: #2d6a4f;
-    font-weight: 700;
-    white-space: nowrap;
-    display: block;
+.detail {
+    font-size: 11px;
+    color: #888;
+    margin: 0;
 }
 
 @media (max-width: 1024px) {
@@ -176,5 +148,6 @@
 @media (max-width: 560px) {
     .grid {
         grid-template-columns: 1fr;
+        max-width: 320px;
     }
 }
