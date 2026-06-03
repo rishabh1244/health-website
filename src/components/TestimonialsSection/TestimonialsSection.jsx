@@ -43,17 +43,10 @@ const TestimonialsSection = () => {
             <div className={styles.grid}>
                 {people.map((p) => (
                     <div key={p.name} className={styles.card}>
-                        {/* Before/After Photos */}
-                        <div className={styles.photoRow}>
-                            <div className={styles.photoWrapper}>
-                                <img src={p.beforeImg} alt={`${p.name} before`} className={styles.photo} />
-                                <span className={styles.photoLabel}>Before</span>
-                            </div>
+                        {/* Transformation Photo */}
+                        <div className={styles.photoContainer}>
+                            <img src={p.beforeImg} alt={`${p.name} transformation`} className={styles.photo} />
                             <div className={styles.tagBadge}>{p.tag}</div>
-                            <div className={styles.photoWrapper}>
-                                <img src={p.afterImg} alt={`${p.name} after`} className={styles.photo} />
-                                <span className={styles.photoLabel}>After</span>
-                            </div>
                         </div>
                         {/* Arrows */}
                         <div className={styles.arrows}>

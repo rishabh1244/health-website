@@ -39,51 +39,38 @@
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
-/* Before/After Photos Row */
-.photoRow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.photoWrapper {
+/* Transformation Photo */
+.photoContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    margin-bottom: 16px;
+    position: relative;
+    width: 100%;
 }
 
 .photo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
     border: 3px solid #e0ede4;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-.photoLabel {
-    font-size: 9px;
-    font-weight: 700;
-    color: #888;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
 }
 
 .tagBadge {
     background: #2d6a4f;
     color: #fff;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 800;
-    padding: 5px 10px;
+    padding: 6px 14px;
     border-radius: 20px;
     letter-spacing: 0.3px;
     white-space: nowrap;
-    align-self: flex-start;
-    margin-top: 6px;
+    position: absolute;
+    bottom: -12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Arrows */
