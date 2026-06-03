@@ -71,7 +71,7 @@ const HeroSection = () => {
                     <img src="/hero_woman.png" alt="21 Day Weight Loss Challenge" className={styles.heroImg} />
                     <div className={styles.daysBubble}>
                         <span className={styles.bubbleNum}>21</span>
-                        <span className={styles.bubbleSub}>days to a<br />better you</span>
+                        <span className={styles.bubbleSub}>DAYS TO A<br />BETTER YOU!</span>
                     </div>
                 </div>
 
