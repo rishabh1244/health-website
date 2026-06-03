@@ -1,0 +1,320 @@
+.hero {
+    background: linear-gradient(135deg, #f8fdf9 0%, #e8f5e9 50%, #f0faf5 100%);
+    padding: 40px 0 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(45, 106, 79, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 380px 280px;
+    gap: 24px;
+    align-items: start;
+}
+
+.leftContent {
+    padding: 20px 0;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #2d6a4f;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 7px 14px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 16px;
+    gap: 2px;
+}
+
+.days {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.cursive {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 44px;
+    font-style: italic;
+    color: #2d6a4f;
+    line-height: 1.1;
+}
+
+.subtext {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 420px;
+}
+
+.features {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.featureItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #555;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.featureIcon {
+    font-size: 22px;
+}
+
+.ctaRow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.primaryBtn {
+    background: #2d6a4f;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.1s;
+    white-space: nowrap;
+}
+
+.primaryBtn:hover {
+    background: #1b4332;
+    transform: translateY(-2px);
+}
+
+.watchBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.playIcon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #2d6a4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2d6a4f;
+    font-size: 13px;
+}
+
+/* Center Image */
+.centerImage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.centerImage img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 16px;
+    object-fit: cover;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+}
+
+.daysBadge {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 16px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 2px solid #e8f5e9;
+}
+
+.bigNum {
+    display: block;
+    font-size: 36px;
+    font-weight: 800;
+    color: #2d6a4f;
+    line-height: 1;
+}
+
+.daysLabel {
+    font-size: 11px;
+    color: #555;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Right Panel */
+.rightPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.highlights {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8f5e9;
+}
+
+.highlightTitle {
+    font-size: 12px;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    margin: 0 0 12px;
+}
+
+.highlightList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.highlightList li {
+    font-size: 13px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Timer */
+.timerBox {
+    background: linear-gradient(135deg, #2d6a4f, #1b4332);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.timerLabel {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 12px;
+    opacity: 0.85;
+}
+
+.timer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.timeUnit {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: center;
+    flex: 1;
+}
+
+.timeUnit span {
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.timeUnit small {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.limitedBtn {
+    display: block;
+    text-align: center;
+    background: #f9a825;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.limitedBtn:hover {
+    background: #f57f17;
+}
+
+@media (max-width: 960px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .rightPanel {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .highlights,
+    .timerBox {
+        flex: 1;
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .centerImage {
+        order: -1;
+    }
+
+    .days {
+        font-size: 36px;
+    }
+
+    .cursive {
+        font-size: 32px;
+    }
+}

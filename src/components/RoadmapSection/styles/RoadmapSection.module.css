@@ -1,0 +1,242 @@
+.section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0 0 36px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr auto 200px;
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 36px;
+}
+
+.weeksGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.weekCard {
+    border-radius: 10px;
+    padding: 18px;
+    position: relative;
+}
+
+.weekLabel {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.weekTitle {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 4px 0;
+}
+
+.weekDays {
+    font-size: 11px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.weekItems {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.weekItems li {
+    font-size: 12px;
+    color: #444;
+}
+
+.weekResult {
+    font-size: 11px;
+    font-weight: 700;
+    color: #2d6a4f;
+    white-space: pre-line;
+    border-top: 1px dashed #ccc;
+    padding-top: 8px;
+    line-height: 1.4;
+}
+
+/* Center */
+.centerImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 140px;
+}
+
+.bigDays {
+    background: linear-gradient(135deg, #2d6a4f, #1b4332);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bigNum {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.bigText {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.imageCaption {
+    font-size: 11px;
+    font-weight: 700;
+    color: #999;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* What You'll Get */
+.whatYouGet {
+    background: #f0faf5;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.wyuTitle {
+    font-size: 15px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0 0 14px;
+}
+
+.wyuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.wyuList li {
+    font-size: 12px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Bottom bar */
+.bottomBar {
+    background: linear-gradient(135deg, #1b4332, #2d6a4f);
+    border-radius: 12px;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.statItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 140px;
+}
+
+.statItem span {
+    font-size: 24px;
+}
+
+.statItem p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.statItem small {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.registerBtn {
+    background: #f9a825;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.registerBtn:hover {
+    background: #f57f17;
+}
+
+.consultBtn {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.consultBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .centerImage {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    .bottomBar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .registerBtn,
+    .consultBtn {
+        text-align: center;
+    }
+}
