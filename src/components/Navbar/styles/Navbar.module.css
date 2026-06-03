@@ -3,51 +3,53 @@
   top: 0;
   z-index: 1000;
   background: #fff;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
-  gap: 24px;
-  height: 68px;
+  height: 62px;
+  gap: 16px;
 }
 
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  text-decoration: none;
+  gap: 9px;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .logoText {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 .logoName {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   color: #1a1a1a;
+  white-space: nowrap;
 }
 
 .logoTagline {
-  font-size: 10px;
+  font-size: 9.5px;
   color: #2d6a4f;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
+/* Nav links - desktop */
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 0;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -56,88 +58,161 @@
 
 .navLinks li a {
   text-decoration: none;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 500;
-  color: #444;
-  padding: 6px 10px;
+  color: #333;
+  padding: 5px 9px;
   border-radius: 4px;
   transition: color 0.2s, background 0.2s;
   white-space: nowrap;
+  display: block;
 }
 
-.navLinks li a:hover,
-.navLinks li a.active {
+.navLinks li a:hover {
   color: #2d6a4f;
-  background: #f0faf5;
 }
 
-.navLinks li a.active {
-  font-weight: 600;
+.activeLink {
+  color: #2d6a4f !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #2d6a4f;
+  border-radius: 0;
+}
+
+/* Right side wrapper */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .bookBtn {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
   background: #2d6a4f;
   color: #fff;
   text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 600;
-  flex-shrink: 0;
-  transition: background 0.2s, transform 0.1s;
+  padding: 9px 14px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
   white-space: nowrap;
+  transition: background 0.2s;
 }
 
 .bookBtn:hover {
   background: #1b4332;
-  transform: translateY(-1px);
 }
 
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
-  margin-left: auto;
+  padding: 6px;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
 }
 
 .hamburger span {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
   background: #333;
   border-radius: 2px;
-  transition: 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
-@media (max-width: 1024px) {
-  .hamburger { display: flex; }
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
 
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile menu dropdown */
+.mobileMenu {
+  display: none;
+  background: #fff;
+  border-top: 1px solid #eee;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.mobileMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.mobileMenu ul li a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #f5f5f5;
+  transition: background 0.15s, color 0.15s;
+}
+
+.mobileMenu ul li a:hover {
+  background: #f0faf5;
+  color: #2d6a4f;
+}
+
+.mobileBookBtn {
+  background: #2d6a4f !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  margin: 8px 16px;
+  border-radius: 6px;
+  text-align: center;
+  border-bottom: none !important;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 960px) {
   .navLinks {
     display: none;
-    position: absolute;
-    top: 68px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    flex-direction: column;
-    padding: 16px 24px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    gap: 4px;
   }
 
-  .navLinks.open { display: flex; }
+  .hamburger {
+    display: flex;
+  }
 
-  .navLinks li a {
+  .bookBtn {
+    display: none;
+  }
+
+  .mobileMenu {
     display: block;
-    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logoName {
+    font-size: 11px;
   }
 
-  .bookBtn { font-size: 12px; padding: 8px 14px; }
+  .logoTagline {
+    font-size: 8.5px;
+  }
+
+  .logoIcon svg {
+    width: 26px;
+    height: 26px;
+  }
 }

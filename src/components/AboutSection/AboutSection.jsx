@@ -4,33 +4,35 @@ const AboutSection = () => {
     return (
         <section className={styles.about} id="about">
             <div className={styles.container}>
-                {/* Left */}
-                <div className={styles.leftContent}>
-                    <div className={styles.sectionTag}>ABOUT</div>
+                {/* Left content */}
+                <div className={styles.left}>
+                    <p className={styles.tag}>ABOUT</p>
                     <h2 className={styles.heading}>
-                        Dr. Meenakshi Jain 🌿
+                        Dr. Meenakshi Jain <span className={styles.leaf}>🌿</span>
                     </h2>
                     <p className={styles.intro}>
                         Dr. Meenakshi Jain is a leading Nutrition Expert helping individuals achieve
                         sustainable weight management, reverse lifestyle diseases, and build a healthier
                         relationship with food.
                     </p>
-
-                    <ul className={styles.credentials}>
-                        <li>✅ Ph.D. in Nutrition & Dietetics</li>
-                        <li>✅ 25+ Years of Clinical & Lifestyle Nutrition Experience</li>
-                        <li>✅ Specialist in Weight Management & Metabolic Health</li>
-                        <li>✅ Personalised, Practical & Science-backed Diet Plans</li>
-                        <li>✅ Trusted by 12,000+ Clients Worldwide</li>
+                    <ul className={styles.creds}>
+                        {[
+                            'Ph.D. in Nutrition & Dietetics',
+                            '25+ Years of Clinical & Lifestyle Nutrition Experience',
+                            'Specialist in Weight Management & Metabolic Health',
+                            'Personalised, Practical & Science-backed Diet Plans',
+                            'Trusted by 12,000+ Clients Worldwide',
+                        ].map((c) => (
+                            <li key={c}>
+                                <span className={styles.tick}>✅</span> {c}
+                            </li>
+                        ))}
                     </ul>
-
-                    <a href="#about" className={styles.knowMoreBtn}>
-                        Know More About Dr. Meenakshi →
-                    </a>
+                    <a href="#about" className={styles.btn}>Know More About Dr. Meenakshi →</a>
                 </div>
 
-                {/* Right Image */}
-                <div className={styles.rightImage}>
+                {/* Right image */}
+                <div className={styles.right}>
                     <img src="/dr_about.png" alt="Dr. Meenakshi Jain" />
                 </div>
             </div>

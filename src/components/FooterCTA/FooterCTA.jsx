@@ -4,17 +4,14 @@ const FooterCTA = () => {
     return (
         <section className={styles.footerCta}>
             <div className={styles.container}>
-                <div className={styles.leftContent}>
-                    <div className={styles.imageWrapper}>
-                        <img src="/salad_bowl.png" alt="Healthy Food" className={styles.saladImg} />
-                    </div>
+                <div className={styles.leftImg}>
+                    <img src="/salad_bowl.png" alt="Healthy Nutrition" className={styles.bowlImg} />
                 </div>
                 <div className={styles.textContent}>
                     <h2 className={styles.heading}>
-                        Your Health Transformation<br />
-                        Starts With The Right Nutrition
+                        Your Health Transformation<br />Starts With The Right Nutrition
                     </h2>
-                    <p className={styles.subtext}>
+                    <p className={styles.sub}>
                         Book your personalised consultation today and take charge of your health.
                     </p>
                     <a href="#book" className={styles.ctaBtn}>Book Appointment Now →</a>

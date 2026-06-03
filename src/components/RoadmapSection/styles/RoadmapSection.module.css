@@ -1,222 +1,233 @@
 .section {
-    padding: 60px 0;
-    background: #fff;
+    padding: 60px 16px;
+    background: #f9f9f9;
 }
 
 .container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 24px;
 }
 
 .heading {
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 800;
     color: #1a1a1a;
-    margin: 0 0 36px;
+    margin: 0 0 32px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr auto 200px;
-    gap: 24px;
+    grid-template-columns: 1fr 140px 220px;
+    gap: 20px;
     align-items: start;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
 }
 
-.weeksGrid {
+/* Weeks */
+.weeks {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
 }
 
 .weekCard {
-    border-radius: 10px;
-    padding: 18px;
-    position: relative;
+    border-radius: 8px;
+    padding: 16px;
 }
 
-.weekLabel {
+.wkLabel {
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 1.5px;
 }
 
-.weekTitle {
-    font-size: 14px;
+.wkTitle {
+    font-size: 13px;
     font-weight: 800;
-    color: #1a1a1a;
-    margin: 4px 0;
+    color: #111;
+    margin: 3px 0 2px;
 }
 
-.weekDays {
+.wkDays {
     font-size: 11px;
-    color: #777;
-    margin-bottom: 10px;
+    color: #888;
+    margin-bottom: 8px;
 }
 
-.weekItems {
+.wkItems {
     list-style: none;
     padding: 0;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
 }
 
-.weekItems li {
-    font-size: 12px;
+.wkItems li {
+    font-size: 11.5px;
     color: #444;
 }
 
-.weekResult {
-    font-size: 11px;
-    font-weight: 700;
-    color: #2d6a4f;
-    white-space: pre-line;
-    border-top: 1px dashed #ccc;
+.wkResult {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed;
+    border-color: inherit;
     padding-top: 8px;
-    line-height: 1.4;
+    font-size: 11px;
+    color: #555;
+}
+
+.wkResult strong {
+    color: #2d6a4f;
+    font-weight: 800;
 }
 
 /* Center */
-.centerImage {
+.center {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 12px;
-    min-width: 140px;
+    align-items: center;
+    height: 100%;
 }
 
-.bigDays {
+.bigBox {
     background: linear-gradient(135deg, #2d6a4f, #1b4332);
     border-radius: 12px;
     padding: 24px 20px;
     text-align: center;
     color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 120px;
 }
 
 .bigNum {
-    font-size: 56px;
+    display: block;
+    font-size: 52px;
     font-weight: 900;
     line-height: 1;
 }
 
-.bigText {
-    font-size: 12px;
+.bigSub {
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
+    margin: 4px 0 0;
+    opacity: 0.85;
     line-height: 1.4;
 }
 
-.imageCaption {
-    font-size: 11px;
-    font-weight: 700;
-    color: #999;
-    letter-spacing: 1px;
-    margin: 0;
+/* Perks */
+.perks {
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 }
 
-/* What You'll Get */
-.whatYouGet {
-    background: #f0faf5;
-    border-radius: 12px;
-    padding: 20px;
-}
-
-.wyuTitle {
-    font-size: 15px;
+.perksTitle {
+    font-size: 14px;
     font-weight: 800;
     color: #1a1a1a;
-    margin: 0 0 14px;
+    margin: 0 0 12px;
 }
 
-.wyuList {
+.perksList {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 7px;
 }
 
-.wyuList li {
+.perksList li {
     font-size: 12px;
     color: #333;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.perkCheck {
+    font-size: 13px;
 }
 
 /* Bottom bar */
 .bottomBar {
     background: linear-gradient(135deg, #1b4332, #2d6a4f);
-    border-radius: 12px;
-    padding: 20px 28px;
+    border-radius: 10px;
+    padding: 18px 24px;
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-.statItem {
+.bStat {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     flex: 1;
-    min-width: 140px;
+    min-width: 130px;
 }
 
-.statItem span {
-    font-size: 24px;
+.bStat span {
+    font-size: 22px;
 }
 
-.statItem p {
+.bStat p {
     margin: 0;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     color: #fff;
 }
 
-.statItem small {
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.7);
+.bStat small {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.65);
 }
 
-.registerBtn {
+.bBtns {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+.regBtn {
     background: #f9a825;
     color: #1a1a1a;
     text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-size: 13px;
+    padding: 11px 18px;
+    border-radius: 5px;
+    font-size: 12.5px;
     font-weight: 700;
     white-space: nowrap;
     transition: background 0.2s;
 }
 
-.registerBtn:hover {
+.regBtn:hover {
     background: #f57f17;
 }
 
 .consultBtn {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
     text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-size: 13px;
+    padding: 11px 18px;
+    border-radius: 5px;
+    font-size: 12.5px;
     font-weight: 600;
     white-space: nowrap;
     transition: background 0.2s;
 }
 
 .consultBtn:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.18);
 }
 
 @media (max-width: 900px) {
@@ -224,8 +235,13 @@
         grid-template-columns: 1fr;
     }
 
-    .centerImage {
-        flex-direction: row;
+    .center {
+        margin: 8px 0;
+    }
+
+    .bigBox {
+        width: 100px;
+        margin: 0 auto;
     }
 }
 
@@ -235,7 +251,11 @@
         align-items: stretch;
     }
 
-    .registerBtn,
+    .bBtns {
+        margin-left: 0;
+    }
+
+    .regBtn,
     .consultBtn {
         text-align: center;
     }
